@@ -1,0 +1,1 @@
+zip -r autograder.zip run_autograder setup.sh requirements.txt run_tests.py tests/

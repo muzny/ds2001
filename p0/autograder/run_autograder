@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+# copy submitted files to the source directory
+cp /autograder/submission/* /autograder/source/
+
+cd /autograder/source
+
+# if you have matplot lib running
+# so that showing plots won't break everything
+#python3 config_matplotlib.py
+#echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc
+
+# run the unit tests
+python3 run_tests.py /autograder/results/results.json
+
+# run program as configured to do all the things
+python3 hello.py
